@@ -1,0 +1,15 @@
+{
+  "title": "LongCat Video Avatar 1.6 (Headless Batch)",
+  "slug": "longcat-video-avatar-headless",
+  "code_file": "notebook.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [
+    "nizamamzn/longcat-avatar-weights"
+  ],
+  "accelerator": "NvidiaTeslaT4"
+}
