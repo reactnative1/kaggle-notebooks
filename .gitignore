@@ -1,0 +1,35 @@
+# Credentials & User-specific files
+kernel-metadata.json
+dataset-metadata.json
+kaggle.json
+*.pem
+*.key
+.env
+.env.*
+
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Jupyter & Checkpoints
+.ipynb_checkpoints/
+
+# Generated Outputs & Temporary Weights
+outputs/
+*.log
+*.mp4
+*.wav
+*.mp3
+*.safetensors
+*.pth
+*.pt
+*.bin
+*.tar
+*.zip
+*.gz
+
+# OS metadata
+.DS_Store
+Thumbs.db
