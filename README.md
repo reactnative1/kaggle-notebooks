@@ -16,7 +16,8 @@ Welcome to my collection of Kaggle and Google Colab notebooks for generative AI 
 
 | Notebook Name | Description | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Links&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | :--- | :--- | :---: |
-| **HyperFlow H3 Flash Ref2VA INT8 (Kaggle)** | High-speed joint video & 32 kHz stereo audio reference generation powered by MiniMax H3 Flash LoRA (Ref2VA INT8). Optimized for Kaggle GPU T4 x2. | [<img src="images/download-for-kaggle.svg" width="133" height="42" alt="Download for Kaggle"/>](workflows/hyperflow-h3-flash/notebook.ipynb)<br>[<img src="images/open-in-colab.svg" width="133" height="42" alt="Open in Colab"/>](https://colab.research.google.com/github/reactnative1/kaggle-notebooks/blob/main/workflows/hyperflow-h3-flash/notebook.ipynb) |
+| **HyperFlow H3 Flash Ref2VA INT8 (Interactive UI)** | Human Interactive Mode: Boots ComfyUI visual web editor exposed via a public Cloudflare tunnel. Experiment, upload custom references, and generate videos with live preview in your browser. Optimized for Kaggle GPU T4 x2. | [<img src="images/download-for-kaggle.svg" width="133" height="42" alt="Download for Kaggle"/>](workflows/hyperflow-h3-flash/notebook.ipynb)<br>[<img src="images/open-in-colab.svg" width="133" height="42" alt="Open in Colab"/>](https://colab.research.google.com/github/reactnative1/kaggle-notebooks/blob/main/workflows/hyperflow-h3-flash/notebook.ipynb) |
+| **HyperFlow H3 Flash Ref2VA INT8 (Headless Batch)** | Autonomous Agent Mode: Headless batch runner for AI agents (Antigravity). Executes multi-shot queues with per-job fault tolerance, streams outputs immediately, and auto-terminates upon completion to preserve GPU quota. Optimized for Kaggle GPU T4 x2. | [<img src="images/download-for-kaggle.svg" width="133" height="42" alt="Download for Kaggle"/>](workflows/hyperflow-h3-flash_headless_mode/notebook.ipynb)<br>[<img src="images/open-in-colab.svg" width="133" height="42" alt="Open in Colab"/>](https://colab.research.google.com/github/reactnative1/kaggle-notebooks/blob/main/workflows/hyperflow-h3-flash_headless_mode/notebook.ipynb) |
 
 ---
 
@@ -25,10 +26,13 @@ Welcome to my collection of Kaggle and Google Colab notebooks for generative AI 
 For developers who use the Kaggle CLI and want to push directly from their terminal without manually uploading:
 
 ```bash
-# Push to your active Kaggle account
+# Push Interactive Human UI
 python tools/push_kernel.py workflows/hyperflow-h3-flash
 
-# Push using a specific account profile in ~/.kaggle/profiles/<profile_name>
-python tools/push_kernel.py workflows/hyperflow-h3-flash --profile my_account
+# Push Autonomous Headless Batch Runner
+python tools/push_kernel.py workflows/hyperflow-h3-flash_headless_mode
+
+# Optional: attach profile or public weights dataset
+python tools/push_kernel.py workflows/hyperflow-h3-flash_headless_mode --profile my_account -d my_username/minimax-h3-open-weights
 ```
 *(The dispatcher automatically reads your local profile, creates a temporary metadata file, pushes, and removes it so zero personal account info is committed to Git).*
