@@ -26,15 +26,15 @@ def resolve_kaggle_username(config_dir: Path) -> str:
     return username
 
 def main():
-    parser = argparse.ArgumentParser(description="Push a generic workflow notebook to Kaggle.")
-    parser.add_argument("workflow_dir", type=str, help="Path to workflow folder containing config.json")
+    parser = argparse.ArgumentParser(description="Push a generic runner notebook to Kaggle.")
+    parser.add_argument("runner_dir", type=str, help="Path to runner folder containing config.json")
     parser.add_argument("--profile", "-p", type=str, default=None, help="Profile name in ~/.kaggle/profiles/<profile>")
     parser.add_argument("--dataset", "-d", action="append", default=[], help="Attach dataset source(s) (e.g. -d username/dataset-slug)")
     parser.add_argument("--dry-run", action="store_true", help="Print generated metadata without pushing")
     parser.add_argument("--keep-metadata", action="store_true", help="Keep generated kernel-metadata.json after pushing")
     args = parser.parse_args()
 
-    wf_dir = Path(args.workflow_dir).resolve()
+    wf_dir = Path(args.runner_dir).resolve()
     config_file = wf_dir / "config.json"
 
     if not config_file.exists():

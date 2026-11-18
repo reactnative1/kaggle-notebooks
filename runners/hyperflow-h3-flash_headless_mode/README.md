@@ -10,6 +10,7 @@ Autonomous, end-to-end batch generation pipeline designed for AI agents (Antigra
 * **Mode:** **Autonomous Headless Batch Runner**
 * **Accelerator:** Kaggle Dual Nvidia Tesla T4 GPU (or P100)
 * **Execution:** Direct REST API queue execution through headless ComfyUI
+* **Included Workflows:** Pre-loaded in [`workflows/`](workflows/) for API execution
 
 ---
 
@@ -27,8 +28,8 @@ Autonomous, end-to-end batch generation pipeline designed for AI agents (Antigra
 ### Via Local Push Dispatcher
 ```bash
 # Push with your active profile
-python tools/push_kernel.py workflows/hyperflow-h3-flash_headless_mode
+python tools/push_kernel.py runners/hyperflow-h3-flash_headless_mode
 
 # Or specify a profile and attach the weights dataset
-python tools/push_kernel.py workflows/hyperflow-h3-flash_headless_mode --profile my_profile -d my_username/minimax-h3-open-weights
+python tools/push_kernel.py runners/hyperflow-h3-flash_headless_mode --profile my_profile -d my_username/minimax-h3-open-weights
 ```
