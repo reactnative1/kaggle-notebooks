@@ -1,0 +1,13 @@
+{
+  "title": "Tencent MimicMotion (Headless Batch)",
+  "slug": "tencent-mimicmotion-headless",
+  "code_file": "notebook.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "accelerator": "NvidiaTeslaT4"
+}

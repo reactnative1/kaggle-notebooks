@@ -1,0 +1,13 @@
+{
+  "title": "MiniMax Face Refine (Gaussian Feathering) (Interactive UI)",
+  "slug": "minimax-face-refine-gaussian",
+  "code_file": "notebook.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "accelerator": "NvidiaTeslaT4"
+}

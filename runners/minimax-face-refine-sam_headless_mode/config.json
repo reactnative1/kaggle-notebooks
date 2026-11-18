@@ -1,0 +1,13 @@
+{
+  "title": "MiniMax Face Refine (SAM Jawline Contour) (Headless Batch)",
+  "slug": "minimax-face-refine-sam-headless",
+  "code_file": "notebook.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "accelerator": "NvidiaTeslaT4"
+}
