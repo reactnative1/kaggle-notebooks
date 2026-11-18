@@ -107,7 +107,7 @@ def main():
         subprocess.run(cmd, env=env, check=True)
         print(f"\n[OK] Kernel pushed successfully to https://www.kaggle.com/code/{kernel_id}")
     finally:
-        if not args.keep-metadata and meta_file.exists():
+        if not args.keep_metadata and meta_file.exists():
             meta_file.unlink()
 
 if __name__ == "__main__":
