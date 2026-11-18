@@ -1,46 +1,34 @@
-# ⚡ AI Kaggle Cloud Notebooks
+# AI Kaggle Cloud Notebooks
 
-A modular, production-ready repository of generative AI workflows, cloud GPU runners, and studio pipelines optimized for **Kaggle Cloud GPUs (Dual Nvidia Tesla T4 / P100)**.
+Welcome to my collection of Kaggle and Google Colab notebooks for generative AI workflows. This repository hosts free, easy-to-use cloud GPU runners that you can run directly in your browser or cloud environment.
 
----
-
-## 🔒 Security & Privacy Standard: Zero Account Leaks
-
-This repository is **strictly account-agnostic and public-safe**:
-* **No Hardcoded Usernames or Identifiers:** No account names or personal emails are stored in any notebook or config.
-* **No Credentials:** `kernel-metadata.json` and credentials are strictly `.gitignore`d.
-* **Dynamic Local Dispatch:** A generic local tool injects your active local Kaggle profile at push time without modifying or committing files.
-* **Cross-Account Quota Ready:** Write your code once, commit once to Git, and push to whichever account has available GPU quota.
+> [!IMPORTANT]
+> **How to run a Kaggle notebook:**
+> 1. Click **Download for Kaggle**, then click the **Download raw file** button at the top right of the file page.
+> 2. Sign in at [kaggle.com](https://www.kaggle.com), go to **Code**, and click **New Notebook**.
+> 3. In the notebook editor, open **File → Import Notebook** (or **Upload Notebook**) and upload the `.ipynb` file you downloaded.
+> 4. In the right panel, set **Session options → Accelerator → GPU T4 x2** (or **P100**) and turn **Internet** on.
+> 5. Run the cells from top to bottom.
 
 ---
 
-## 📋 Catalog of Workflows
+## Notebooks
 
-| Category | Workflow | Hardware | Description | Guide |
-| :--- | :--- | :--- | :--- | :--- |
-| **Video & Audio** | `hyperflow-h3-flash` | Dual Nvidia Tesla T4 | Fast joint video & audio generation with MiniMax H3 Flash LoRA (Ref2VA INT8) | [README](workflows/hyperflow-h3-flash/README.md) |
-| **Audio / TTS** | `qwen3-tts-studio` *(Upcoming)* | Single T4 / P100 | High-fidelity voice cloning, paced dialogue synthesis, and voice design | *(Next)* |
-| **Video Enhancement** | `minimax-h3-face-restoration` *(Upcoming)* | Dual Nvidia Tesla T4 | ComfyUI wide-shot facial restoration pipeline using VoSR2 & SAM | *(Next)* |
+| Notebook Name | Description | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Links&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| :--- | :--- | :---: |
+| **HyperFlow H3 Flash Ref2VA INT8 (Kaggle)** | High-speed joint video & 32 kHz stereo audio reference generation powered by MiniMax H3 Flash LoRA (Ref2VA INT8). Optimized for Kaggle GPU T4 x2. | [<img src="images/download-for-kaggle.svg" width="133" height="42" alt="Download for Kaggle"/>](workflows/hyperflow-h3-flash/notebook.ipynb)<br>[<img src="images/open-in-colab.svg" width="133" height="42" alt="Open in Colab"/>](https://colab.research.google.com/github/reactnative1/kaggle-notebooks/blob/main/workflows/hyperflow-h3-flash/notebook.ipynb) |
 
 ---
 
-## 🚀 Quickstart: Local Push Dispatcher
+## 🚀 Local Push Dispatcher (Zero Account Exposure)
 
-Push any workflow directly to Kaggle using your local profile without touching Git:
+For developers who use the Kaggle CLI and want to push directly from their terminal without manually uploading:
 
 ```bash
-# 1. Push to your active Kaggle account
+# Push to your active Kaggle account
 python tools/push_kernel.py workflows/hyperflow-h3-flash
 
-# 2. Or specify a local profile (~/.kaggle/profiles/<profile_name>)
+# Push using a specific account profile in ~/.kaggle/profiles/<profile_name>
 python tools/push_kernel.py workflows/hyperflow-h3-flash --profile my_account
 ```
-
----
-
-## 🌐 Running Manually in the Kaggle Web UI
-
-1. Open [Kaggle Notebooks](https://www.kaggle.com/code) and click **New Notebook**.
-2. Go to **File -> Upload Notebook** and select the `notebook.ipynb` from the target workflow folder.
-3. In the right panel, select **Accelerator: GPU T4 x2** (or **P100**) and enable **Internet On**.
-4. Click **Run All**.
+*(The dispatcher automatically reads your local profile, creates a temporary metadata file, pushes, and removes it so zero personal account info is committed to Git).*
