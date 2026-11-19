@@ -53,6 +53,9 @@ def main():
             sys.exit(1)
         config_dir = profiles_dir
         env["KAGGLE_CONFIG_DIR"] = str(profiles_dir)
+        token_file = profiles_dir / "access_token"
+        if token_file.exists():
+            env["KAGGLE_API_TOKEN"] = token_file.read_text(encoding="utf-8").strip()
     elif "KAGGLE_CONFIG_DIR" in env:
         config_dir = Path(env["KAGGLE_CONFIG_DIR"])
     else:
