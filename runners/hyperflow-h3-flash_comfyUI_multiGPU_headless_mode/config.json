@@ -1,0 +1,16 @@
+{
+  "title": "HyperFlow H3 Flash Ref2VA (ComfyUI MultiGPU Headless)",
+  "slug": "hyperflow-h3-flash-comfyui-multigpu-headless",
+  "code_file": "notebook.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": [],
+  "accelerator": "NvidiaTeslaT4"
+}
