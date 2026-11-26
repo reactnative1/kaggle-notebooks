@@ -40,6 +40,6 @@ The following official ComfyUI workflows are included directly in this repositor
 
 ### Option 2: Via Local Push Dispatcher
 ```bash
-python tools/push_kernel.py runners/hyperflow-h3-flash --profile my_profile -d my_username/minimax-h3-open-weights
+python tools/push_kernel.py runners/hyperflow-h3-flash_comfyUI_multiGPU --profile my_profile -d my_username/minimax-h3-open-weights
 ```
 *(The server will stay online so you can connect to the public tunnel until you choose to stop it).*
